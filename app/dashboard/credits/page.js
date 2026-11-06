@@ -9,7 +9,7 @@ export default function CreditReadiness() {
 
   return (
     <div className="min-h-screen bg-gray-50 p-8 font-sans">
-      
+
       {/* Header */}
       <div className="max-w-4xl mx-auto mb-8">
         <button onClick={() => router.push('/dashboard')} className="flex items-center text-gray-500 hover:text-gray-800 transition font-medium mb-4">
@@ -32,7 +32,7 @@ export default function CreditReadiness() {
             <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-3">
                     <p className="text-gray-600 text-sm leading-relaxed">
-                        Credits are not awarded for "being green." They are awarded for <strong>provable data</strong>. Most institutions fail to monetize sustainability because:
+                        Credits are not awarded for &quot;being green.&quot; They are awarded for <strong>provable data</strong>. Most institutions fail to monetize sustainability because:
                     </p>
                     <ul className="list-disc list-inside text-sm text-gray-600 space-y-2 ml-2">
                         <li>Sustainability actions are not recorded consistently.</li>
@@ -42,7 +42,7 @@ export default function CreditReadiness() {
                 </div>
                 <div className="bg-red-50 p-6 rounded-lg border border-red-100 flex items-center justify-center text-center">
                     <p className="text-red-800 font-medium italic">
-                        "Credit agencies require historical, auditable data chains, not last-minute claims."
+                        &quot;Credit agencies require historical, auditable data chains, not last-minute claims.&quot;
                     </p>
                 </div>
             </div>
@@ -63,7 +63,7 @@ export default function CreditReadiness() {
                         <p className="text-xs text-blue-300">Preserve verified waste logs, photos, and handler confirmations.</p>
                     </div>
                     <div className="bg-blue-800/50 p-4 rounded-lg flex-1 border border-blue-700">
-                        <p className="font-bold text-sm mb-1 text-blue-200">We Don't</p>
+                        <p className="font-bold text-sm mb-1 text-blue-200">We Don&apos;t</p>
                         <p className="text-xs text-blue-300">Invent numbers, estimate carbon arbitrarily, or sell credits directly.</p>
                     </div>
                 </div>
@@ -102,13 +102,13 @@ export default function CreditReadiness() {
             <p className="text-gray-500 text-sm mb-6 max-w-lg mx-auto">
                 Carbon & EPR enablement will be activated once sufficient verified data and participating institutions are available.
             </p>
-            
+
             {notified ? (
                 <button disabled className="bg-green-600 text-white px-6 py-3 rounded-lg font-bold flex items-center gap-2 mx-auto cursor-default shadow-sm">
                     <CheckCircle className="h-5 w-5" /> Interest Registered
                 </button>
             ) : (
-                <button 
+                <button
                     onClick={() => setNotified(true)}
                     className="bg-gray-900 text-white px-6 py-3 rounded-lg font-bold hover:bg-black transition flex items-center gap-2 mx-auto shadow-lg"
                 >

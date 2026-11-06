@@ -1,0 +1,22 @@
+# Site Rewrite: Compliance Operating System
+
+- [x] Update Global Style System (`src/style.css`)
+  - Deep blue/teal primary, safety green accent, white/light grey background.
+  - Industrial clean, simple icons, minimal gradients, readable typography.
+- [x] Rewrite Home Page (`index.html`)
+  - Implement 7 sections detailed in the prompt.
+- [x] Create For Recyclers Page (`for-recyclers.html`)
+  - Implement 6 sections detailed in the prompt.
+- [x] Create For Compliance Consultants/PROs Page (`for-agencies.html`)
+  - Implement 4 sections detailed in the prompt.
+- [x] Rewrite How it Works Page (`how-it-works.html`)
+  - Implement 5 steps with timeline layout.
+- [x] Rewrite Features Page (`features.html`)
+  - Divide into 4 specific modules.
+- [x] Create Knowledge Center Page (`knowledge.html`)
+  - Create article placeholders.
+- [x] Rewrite Contact Page (`contact.html`)
+  - Simple form requesting facility setup.
+- [/] Update Navigation and Footer across all pages
+  - Update links: Features, For Recyclers, For Agencies, Knowledge, Contact.
+  - Update footer text and links.

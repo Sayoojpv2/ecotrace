@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Request a facility setup with EcoTrace's compliance operating system." />
+  <title>Request Setup - EcoTrace Compliance OS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+  <style>
+    .contact-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: var(--surface-color);
+      border: 1px solid var(--border-color);
+      padding: 3rem;
+      border-radius: 6px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      background: var(--input-bg);
+      font-family: inherit;
+      font-size: 1rem;
+      color: var(--text-primary);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--brand-primary);
+      box-shadow: 0 0 0 3px rgba(15, 76, 92, 0.1);
+    }
+
+    select.form-control {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      background-size: 1em;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <a href="/" class="logo">
+        <span class="logo-icon">📋</span>
+        EcoTrace
+      </a>
+      <div class="nav-links">
+        <a href="/features.html">Features</a>
+        <a href="/for-recyclers.html">For Recyclers</a>
+        <a href="/for-agencies.html">For Agencies</a>
+        <a href="/knowledge.html">Knowledge</a>
+        <a href="/contact.html" class="btn btn-primary active">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="hero" style="padding: 4rem 0 2rem; border-bottom: none;">
+      <div class="container text-center">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">Request Facility Setup</h1>
+        <p style="max-width: 600px; margin: 0 auto;">After submission, the EcoTrace team will contact you to schedule a
+          site review and system setup.</p>
+      </div>
+    </header>
+
+    <!-- Contact Form -->
+    <section class="section pt-0">
+      <div class="container">
+        <div class="contact-container">
+          <form
+            onsubmit="event.preventDefault(); alert('Setup request submitted! Our team will contact you shortly.');">
+
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+            </div>
+
+            <div class="form-group">
+              <label for="facility-type">Facility Type</label>
+              <select id="facility-type" class="form-control" required>
+                <option value="" disabled selected>Select facility type...</option>
+                <option value="recycler">Recycling Facility / Dismantler</option>
+                <option value="pro">PRO / Compliance Agency</option>
+                <option value="generator">Bulk Waste Generator</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="waste-type">Primary Waste Handled</label>
+              <select id="waste-type" class="form-control" required>
+                <option value="" disabled selected>Select waste type...</option>
+                <option value="plastic">Plastic Waste</option>
+                <option value="ewaste">E-Waste</option>
+                <option value="battery">Battery / Metal Scrap</option>
+                <option value="paper">Paper / Cardboard</option>
+                <option value="other">Multiple / Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="location">Location (City, State)</label>
+              <input type="text" id="location" class="form-control" placeholder="e.g. Mumbai, Maharashtra" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" class="form-control" placeholder="+91..." required>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-large" style="width: 100%; margin-top: 1rem;">Submit
+              Request</button>
+            <p style="text-align: center; color: var(--text-secondary); font-size: 0.85rem; margin-top: 1rem;">
+              By submitting, you agree to EcoTrace's Privacy Policy.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+      <div class="container footer-content">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <span class="logo-icon">📋</span>
+            EcoTrace
+          </a>
+          <p class="mt-2">EcoTrace supports facilities in maintaining operational records and documentation required for
+            regulatory reporting.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Product</h4>
+          <a href="/features.html">Features</a>
+          <a href="/how-it-works.html">How it Works</a>
+        </div>
+        <div class="footer-links">
+          <h4>Solutions</h4>
+          <a href="/for-recyclers.html">For Recyclers</a>
+          <a href="/for-agencies.html">For Agencies</a>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <a href="/knowledge.html">Knowledge Center</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>EcoTrace records recycling operations, prepares inspection-ready documentation, and makes facility processing
+          usable for official compliance reporting.</p>
+      </div>
+    </footer>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

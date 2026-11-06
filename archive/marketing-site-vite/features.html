@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Explore the core modules of EcoTrace: Chain-of-Custody Tracking, Compliance Vault, Inspection Preparation, and Reporting Support." />
+  <title>Features - EcoTrace Compliance OS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+  <style>
+    .module-card {
+      background: var(--surface-color);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    .module-header {
+      background: var(--brand-primary);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .module-header h3 {
+      color: white;
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .module-icon {
+      font-size: 2.5rem;
+    }
+
+    .module-body {
+      padding: 2rem;
+      flex: 1;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .feature-list li {
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-weight: 500;
+    }
+
+    .feature-list li:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .feature-check {
+      color: var(--brand-accent);
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <a href="/" class="logo">
+        <span class="logo-icon">📋</span>
+        EcoTrace
+      </a>
+      <div class="nav-links">
+        <a href="/features.html" class="active">Features</a>
+        <a href="/for-recyclers.html">For Recyclers</a>
+        <a href="/for-agencies.html">For Agencies</a>
+        <a href="/knowledge.html">Knowledge</a>
+        <a href="/contact.html" class="btn btn-primary">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="hero" style="padding: 4rem 0;">
+      <div class="container text-center">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">Core Operating Modules</h1>
+        <p style="max-width: 600px; margin: 0 auto;">Four industrial-strength modules designed strictly to maintain
+          operations, preserve proof, and generate compliant documentation.</p>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <section class="section">
+      <div class="container">
+        <div class="grid-2">
+
+          <!-- Module 1 -->
+          <div class="module-card">
+            <div class="module-header">
+              <div class="module-icon">🔗</div>
+              <h3>Chain-of-Custody Tracking</h3>
+            </div>
+            <div class="module-body">
+              <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Definitive proof of material origin and
+                movement continuously logged during facility operations.</p>
+              <ul class="feature-list">
+                <li><span class="feature-check">✓</span> Event Logging</li>
+                <li><span class="feature-check">✓</span> Photo Proof</li>
+                <li><span class="feature-check">✓</span> Material History</li>
+                <li><span class="feature-check">✓</span> Timestamp Records</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Module 2 -->
+          <div class="module-card">
+            <div class="module-header">
+              <div class="module-icon">🛡️</div>
+              <h3>Compliance Vault</h3>
+            </div>
+            <div class="module-body">
+              <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Secure centralization of all your
+                authorizations, consents, and categorized historical records.</p>
+              <ul class="feature-list">
+                <li><span class="feature-check">✓</span> Document Storage</li>
+                <li><span class="feature-check">✓</span> Expiry Alerts</li>
+                <li><span class="feature-check">✓</span> Categorized Records</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Module 3 -->
+          <div class="module-card">
+            <div class="module-header">
+              <div class="module-icon">🔍</div>
+              <h3>Inspection Preparation</h3>
+            </div>
+            <div class="module-body">
+              <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Instant compilation of your ledgers and
+                stock details formatted precisely for surprise regulatory visits.</p>
+              <ul class="feature-list">
+                <li><span class="feature-check">✓</span> Auto Registers</li>
+                <li><span class="feature-check">✓</span> Printable Files</li>
+                <li><span class="feature-check">✓</span> Date-wise Logs</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Module 4 -->
+          <div class="module-card">
+            <div class="module-header">
+              <div class="module-icon">📊</div>
+              <h3>Reporting Support</h3>
+            </div>
+            <div class="module-body">
+              <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Data structuring that converts raw daily
+                processing into the exact formats required by EPR portals.</p>
+              <ul class="feature-list">
+                <li><span class="feature-check">✓</span> Monthly Summaries</li>
+                <li><span class="feature-check">✓</span> Structured Data</li>
+                <li><span class="feature-check">✓</span> Traceable Documentation</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section section-alt text-center">
+      <div class="container">
+        <h2 class="mb-3">Deploy these modules in your yard.</h2>
+        <a href="/contact.html" class="btn btn-primary btn-large">Request Facility Setup</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <span class="logo-icon">📋</span>
+            EcoTrace
+          </a>
+          <p class="mt-2">EcoTrace supports facilities in maintaining operational records and documentation required for
+            regulatory reporting.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Product</h4>
+          <a href="/features.html">Features</a>
+          <a href="/how-it-works.html">How it Works</a>
+        </div>
+        <div class="footer-links">
+          <h4>Solutions</h4>
+          <a href="/for-recyclers.html">For Recyclers</a>
+          <a href="/for-agencies.html">For Agencies</a>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <a href="/knowledge.html">Knowledge Center</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>EcoTrace records recycling operations, prepares inspection-ready documentation, and makes facility processing
+          usable for official compliance reporting.</p>
+      </div>
+    </footer>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoTrace - Sign Up</title>
+  <!-- Modern Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@300;500;700;800&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div id="app">
+    <div class="auth-page">
+      <div class="auth-card">
+        <div class="auth-header">
+          <h1>Sign Up</h1>
+          <p>Create your EcoTrace profile</p>
+        </div>
+
+        <div class="auth-tabs">
+          <div class="auth-tab active" id="tab-institution">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="2" width="16" height="20" rx="2" ry="2" />
+              <path d="M9 22v-4h6v4" />
+              <path d="M8 6h.01" />
+              <path d="M16 6h.01" />
+              <path d="M12 6h.01" />
+              <path d="M12 10h.01" />
+              <path d="M12 14h.01" />
+              <path d="M16 10h.01" />
+              <path d="M16 14h.01" />
+              <path d="M8 10h.01" />
+              <path d="M8 14h.01" />
+            </svg>
+            <span>Institution</span>
+          </div>
+          <div class="auth-tab" id="tab-waste-handler">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 18H3c-.6 0-1-.4-1-1V7c0-.6.4-1 1-1h10c.6 0 1 .4 1 1v11" />
+              <path d="M14 9h4l4 4v5c0 .6-.4 1-1 1h-2" />
+              <circle cx="7" cy="18" r="2" />
+              <circle cx="17" cy="18" r="2" />
+            </svg>
+            <span>Waste Handler</span>
+          </div>
+        </div>
+
+        <form id="signup-form" action="/" onsubmit="event.preventDefault(); window.location.href='/';">
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" id="email" class="form-control" placeholder="admin@test.com" style="padding-left: 1rem;"
+              required>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" class="form-control" placeholder="••••••" style="padding-left: 1rem;"
+              required>
+          </div>
+
+          <div class="form-group">
+            <label for="institution-name">Institution Name</label>
+            <input type="text" id="institution-name" class="form-control" placeholder="Test College"
+              style="padding-left: 1rem;" required>
+          </div>
+
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" class="form-control" placeholder="Kochi" style="padding-left: 1rem;" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+        </form>
+
+        <div class="auth-footer">
+          Already have an account? <a href="/signin.html">Sign in</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Simple tab switching logic for UI
+    document.getElementById('tab-institution').addEventListener('click', function () {
+      this.classList.add('active');
+      document.getElementById('tab-waste-handler').classList.remove('active');
+      document.querySelector('label[for="institution-name"]').textContent = 'Institution Name';
+    });
+
+    document.getElementById('tab-waste-handler').addEventListener('click', function () {
+      this.classList.add('active');
+      document.getElementById('tab-institution').classList.remove('active');
+      document.querySelector('label[for="institution-name"]').textContent = 'Company Name';
+    });
+  </script>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

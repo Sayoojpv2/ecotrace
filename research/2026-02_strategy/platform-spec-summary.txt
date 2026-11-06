@@ -1,0 +1,380 @@
+EcoTrace Website — Complete Detailed Explanation
+1. What the EcoTrace Website Is
+
+EcoTrace is a web-based sustainability compliance and activity-tracking platform designed for institutions (colleges, companies, hospitals, etc.) to record, verify, and present environmental actions in a structured, audit-ready manner.
+
+The website acts as:
+
+A data entry system for sustainability actions
+
+A verification interface for waste handlers
+
+A documentation vault
+
+A reporting and audit support tool
+
+It is not a public website.
+It is a login-based internal platform.
+
+2. Website Structure (High-Level)
+
+The website consists of:
+
+Authentication pages
+
+Role-based dashboards
+
+Activity creation and management pages
+
+Waste verification workflow pages
+
+Document storage and viewing pages
+
+Reporting and timeline pages
+
+Admin oversight pages (restricted)
+
+Every page is protected by authentication and role permissions.
+
+3. User Roles on the Website
+
+The website supports three types of users, and each sees a different version of the site after login.
+
+3.1 Institution User
+
+Primary user of the website
+
+Represents an organization (college, company, etc.)
+
+Can create and manage sustainability activities
+
+Can upload proof and documents
+
+Can request waste pickup
+
+Can generate reports
+
+3.2 Waste Handler User
+
+Represents waste collectors or recyclers
+
+Only interacts with waste verification pages
+
+Cannot see institution dashboards or reports
+
+Cannot edit institution data
+
+3.3 Admin User
+
+Internal oversight role
+
+Can view all data across institutions
+
+Read-only access
+
+Used for audits, monitoring, and system control
+
+4. Authentication Pages
+4.1 Signup Page
+
+The signup page allows a new user to:
+
+Enter email and password
+
+Select their role (institution or handler)
+
+Enter basic profile details:
+
+Institution name OR handler name
+
+City
+
+Pincode
+
+After signup:
+
+User is created in authentication system
+
+A corresponding profile record is created in the database
+
+This profile determines what parts of the website they can access
+
+4.2 Login Page
+
+The login page:
+
+Accepts email and password
+
+Authenticates the user
+
+Fetches the user’s role from the database
+
+Redirects the user to the correct dashboard automatically
+
+There is no single shared homepage after login — routing is role-based.
+
+5. Institution Dashboard (Main Website Area)
+
+This is the core part of the website.
+
+The institution dashboard acts as:
+
+A control panel
+
+A summary view
+
+A navigation hub
+
+5.1 Dashboard Overview Section
+
+Shows:
+
+Total activities created
+
+Activities by status (draft, submitted, locked)
+
+Pending waste verifications
+
+Recently completed activities
+
+This section gives a quick compliance snapshot.
+
+6. Activity Management Pages
+6.1 Create Activity Page
+
+Institutions can create a new sustainability activity by filling a structured form.
+
+Each activity includes:
+
+Activity type (selected from predefined list)
+
+Description of the activity
+
+Date of activity
+
+Location
+
+Responsible person
+
+Proof image upload (photo taken on-site or document)
+
+Optional waste handling requirement
+
+Activities are initially saved as drafts.
+
+6.2 Activity Status Flow (Very Important)
+
+Each activity follows a strict lifecycle:
+
+Draft
+
+Editable
+
+Not visible to handlers
+
+Proof can still be changed
+
+Submitted
+
+Locked for editing
+
+Indicates the institution claims completion
+
+Triggers waste verification if required
+
+Locked
+
+Activity is fully verified
+
+No changes allowed
+
+Eligible for reporting and audits
+
+This lifecycle ensures data integrity.
+
+7. Waste Handling & Verification Pages
+7.1 Waste Request Creation (Institution Side)
+
+If an activity involves waste:
+
+Institution marks “Pickup Required”
+
+Specifies waste type and pickup location
+
+System generates an OTP
+
+Activity is linked to a waste log
+
+7.2 Handler Dashboard
+
+When a handler logs in, they see:
+
+A list of pending waste pickups
+
+Only those that match their city or pincode
+
+Only those not yet verified
+
+They do not see institution details beyond what is required for pickup.
+
+7.3 Waste Verification Page
+
+The handler:
+
+Selects a waste pickup
+
+Enters the OTP provided by the institution
+
+Confirms:
+
+Waste quantity range
+
+Segregation quality rating (1–5)
+
+Once verified:
+
+Waste log status changes to “verified”
+
+The linked activity becomes eligible to be locked
+
+This page is critical for third-party validation.
+
+8. Document Vault Pages
+Purpose
+
+The document vault stores supporting compliance documents.
+
+Documents include:
+
+Government certificates
+
+Audit letters
+
+Bills
+
+External approvals
+
+Reports generated from the system
+
+Website behavior:
+
+Only the owning institution can view their documents
+
+Documents are not publicly accessible
+
+Files are stored securely with access rules
+
+This section supports long-term audit readiness.
+
+9. Timeline Page
+
+The timeline page shows:
+
+All activities in chronological order
+
+Status changes over time
+
+Verification milestones
+
+Lock dates
+
+This page helps:
+
+Internal reviews
+
+Audit walkthroughs
+
+Compliance presentations
+
+10. Reports Page
+Reporting Features
+
+Institutions can:
+
+Filter activities by date range
+
+Filter by category (energy, waste, water, etc.)
+
+Filter by status
+
+Reports are:
+
+Structured
+
+Consistent
+
+Exportable (PDF/CSV in later stages)
+
+Reports represent official compliance output, not raw data.
+
+11. Admin Pages (Restricted)
+
+Admins can:
+
+View all institutions
+
+View all activities
+
+View waste verification logs
+
+Access reports
+
+Admins:
+
+Cannot edit activities
+
+Cannot alter verification results
+
+Maintain system neutrality
+
+This preserves audit credibility.
+
+12. Security & Access Control (Website Behavior)
+
+Every page checks authentication
+
+Every data request is role-filtered
+
+Users can only see data they are authorized to see
+
+Handlers cannot access institution dashboards
+
+Institutions cannot access handler tools
+
+This ensures:
+
+Data privacy
+
+Legal compliance
+
+Trustworthiness
+
+13. What the Website Is Designed For
+
+The EcoTrace website is designed to:
+
+Replace unstructured Excel/WhatsApp/email tracking
+
+Create verifiable sustainability records
+
+Support audits, rankings, and funding reviews
+
+Build institutional credibility over time
+
+14. What the Website Is NOT
+
+The website is not:
+
+A public awareness portal
+
+A marketplace
+
+A payment platform
+
+A social platform
+
+It is a professional compliance system.
+
+15. Final One-Paragraph Summary
+
+EcoTrace is a secure, role-based web platform that allows institutions to log sustainability activities, upload proof, request waste verification from third-party handlers, store compliance documents, and generate audit-ready reports. Every action follows a controlled lifecycle, is linked to verified data, and is accessible only to authorized users, making the website suitable for formal compliance, audits, and long-term sustainability tracking.

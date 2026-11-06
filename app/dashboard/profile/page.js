@@ -13,7 +13,7 @@ export default function EditProfile() {
   const router = useRouter()
   const [loading, setLoading] = useState(true)
   const [updating, setUpdating] = useState(false)
-  
+
   const [formData, setFormData] = useState({
     org_name: '',
     phone: '',
@@ -81,7 +81,7 @@ export default function EditProfile() {
                 <h1 className="text-2xl font-bold flex items-center gap-3">
                     <Building className="h-6 w-6" /> Edit Organization Details
                 </h1>
-                <p className="text-green-100 mt-1 opacity-90">Update your institution's public profile</p>
+                <p className="text-green-100 mt-1 opacity-90">Update your institution&apos;s public profile</p>
             </div>
 
             <div className="p-8">
@@ -89,14 +89,14 @@ export default function EditProfile() {
                     <p className="text-center text-gray-400">Loading your details...</p>
                 ) : (
                     <form onSubmit={handleUpdate} className="space-y-6">
-                        
+
                         {/* Org Name */}
                         <div>
                             <label className="block text-sm font-bold text-gray-700 mb-2 flex items-center gap-2">
                                 <Building className="h-4 w-4 text-green-600" /> Organization Name
                             </label>
-                            <input 
-                                type="text" 
+                            <input
+                                type="text"
                                 className="w-full p-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition bg-gray-50 focus:bg-white"
                                 value={formData.org_name}
                                 onChange={(e) => setFormData({...formData, org_name: e.target.value})}
@@ -108,8 +108,8 @@ export default function EditProfile() {
                             <label className="block text-sm font-bold text-gray-700 mb-2 flex items-center gap-2">
                                 <Phone className="h-4 w-4 text-green-600" /> Contact Phone
                             </label>
-                            <input 
-                                type="text" 
+                            <input
+                                type="text"
                                 className="w-full p-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition bg-gray-50 focus:bg-white"
                                 value={formData.phone}
                                 onChange={(e) => setFormData({...formData, phone: e.target.value})}
@@ -121,8 +121,8 @@ export default function EditProfile() {
                             <label className="block text-sm font-bold text-gray-700 mb-2 flex items-center gap-2">
                                 <MapPin className="h-4 w-4 text-green-600" /> City / District
                             </label>
-                            <input 
-                                type="text" 
+                            <input
+                                type="text"
                                 className="w-full p-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition bg-gray-50 focus:bg-white"
                                 value={formData.city}
                                 onChange={(e) => setFormData({...formData, city: e.target.value})}
@@ -130,7 +130,7 @@ export default function EditProfile() {
                         </div>
 
                         {/* Save Button */}
-                        <button 
+                        <button
                             disabled={updating}
                             className="w-full bg-gray-900 text-white font-bold py-4 rounded-xl hover:bg-black transition flex items-center justify-center gap-2 shadow-md mt-4"
                         >

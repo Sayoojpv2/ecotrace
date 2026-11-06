@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="See how EcoTrace's compliance operating system works step by step for your recycling facility." />
+  <title>How it Works - EcoTrace Compliance OS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+  <style>
+    .vertical-timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 4rem auto;
+      padding: 0 1rem;
+    }
+
+    .vertical-timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 4px;
+      background: var(--border-color);
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+
+    .timeline-step {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 50%;
+      padding-right: 3rem;
+      position: relative;
+      margin-bottom: 3rem;
+    }
+
+    .timeline-step:nth-child(even) {
+      align-self: flex-end;
+      justify-content: flex-start;
+      margin-left: 50%;
+      padding-right: 0;
+      padding-left: 3rem;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      right: -24px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 48px;
+      background: var(--surface-color);
+      border: 4px solid var(--brand-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: var(--brand-primary);
+      z-index: 10;
+    }
+
+    .timeline-step:nth-child(even) .timeline-dot {
+      right: auto;
+      left: -24px;
+    }
+
+    .timeline-content {
+      background: var(--surface-color);
+      border: 1px solid var(--border-color);
+      padding: 2rem;
+      border-radius: 6px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      width: 100%;
+      position: relative;
+    }
+
+    .timeline-content::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -10px;
+      transform: translateY(-50%) rotate(45deg);
+      width: 20px;
+      height: 20px;
+      background: var(--surface-color);
+      border-right: 1px solid var(--border-color);
+      border-top: 1px solid var(--border-color);
+    }
+
+    .timeline-step:nth-child(even) .timeline-content::after {
+      right: auto;
+      left: -10px;
+      transform: translateY(-50%) rotate(225deg);
+    }
+
+    .timeline-content h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-content p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+
+    .timeline-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--brand-primary);
+    }
+
+    @media (max-width: 768px) {
+      .vertical-timeline::before {
+        left: 30px;
+      }
+
+      .timeline-step {
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 0;
+        justify-content: flex-start;
+      }
+
+      .timeline-step:nth-child(even) {
+        margin-left: 0;
+        padding-left: 80px;
+      }
+
+      .timeline-dot {
+        left: 6px !important;
+        right: auto !important;
+      }
+
+      .timeline-content::after {
+        left: -10px !important;
+        right: auto !important;
+        transform: translateY(-50%) rotate(225deg) !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <a href="/" class="logo">
+        <span class="logo-icon">📋</span>
+        EcoTrace
+      </a>
+      <div class="nav-links">
+        <a href="/features.html">Features</a>
+        <a href="/for-recyclers.html">For Recyclers</a>
+        <a href="/for-agencies.html">For Agencies</a>
+        <a href="/knowledge.html">Knowledge</a>
+        <a href="/contact.html" class="btn btn-primary">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="hero" style="padding: 4rem 0;">
+      <div class="container text-center">
+        <div class="badge mb-2 pb-1" style="background:var(--brand-accent); color:black;">Operational Clarity</div>
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">How It Works</h1>
+        <p style="max-width: 600px; margin: 0 auto;">From facility registration to generating inspection-ready records,
+          see how EcoTrace integrates into your daily yard workflow.</p>
+      </div>
+    </header>
+
+    <!-- Vertical Timeline -->
+    <section class="section" style="padding-top: 2rem;">
+      <div class="container">
+        <div class="vertical-timeline">
+
+          <!-- Step 1 -->
+          <div class="timeline-step">
+            <div class="timeline-dot">1</div>
+            <div class="timeline-content">
+              <div class="timeline-icon">🏗️</div>
+              <h3>Onboarding</h3>
+              <p>Facility registration and document setup. Our team maps your yard's specific processes, capacities, and
+                active licenses to tailor the system to your operations.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="timeline-step">
+            <div class="timeline-dot">2</div>
+            <div class="timeline-content">
+              <div class="timeline-icon">📱</div>
+              <h3>Daily Recording</h3>
+              <p>Simple activity confirmations. Weighbridge operators and floor managers log inward receipts, daily
+                processing runs, and material dispatch with basic taps and photo proof.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="timeline-step">
+            <div class="timeline-dot">3</div>
+            <div class="timeline-content">
+              <div class="timeline-icon">🔍</div>
+              <h3>Monitoring</h3>
+              <p>The system checks completeness continuously. It verifies mass balances in real-time and alerts you
+                instantly if quantities don't match or required records are missing.</p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="timeline-step">
+            <div class="timeline-dot">4</div>
+            <div class="timeline-content">
+              <div class="timeline-icon">🗂️</div>
+              <h3>Documentation</h3>
+              <p>Automatic registers and reports are assembled in the background. Your daily entries instantly update
+                statutory stock ledgers, processing registers, and formatted summaries.</p>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="timeline-step">
+            <div class="timeline-dot" style="border-color: var(--brand-accent); background: #f0fdf4;">5</div>
+            <div class="timeline-content" style="border-color: var(--brand-accent);">
+              <div class="timeline-icon" style="color: var(--brand-accent);">✅</div>
+              <h3>Compliance Use</h3>
+              <p>Clean documents are finally used in official reporting. Hand over perfectly formatted, verifiable
+                records to inspectors, PROs, or Pollution Control boards without any last-minute stress.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section section-alt text-center">
+      <div class="container">
+        <h2 class="mb-3">Ready to structure your records?</h2>
+        <a href="/contact.html" class="btn btn-primary btn-large">Request Facility Setup</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <span class="logo-icon">📋</span>
+            EcoTrace
+          </a>
+          <p class="mt-2">EcoTrace supports facilities in maintaining operational records and documentation required for
+            regulatory reporting.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Product</h4>
+          <a href="/features.html">Features</a>
+          <a href="/how-it-works.html">How it Works</a>
+        </div>
+        <div class="footer-links">
+          <h4>Solutions</h4>
+          <a href="/for-recyclers.html">For Recyclers</a>
+          <a href="/for-agencies.html">For Agencies</a>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <a href="/knowledge.html">Knowledge Center</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>EcoTrace records recycling operations, prepares inspection-ready documentation, and makes facility processing
+          usable for official compliance reporting.</p>
+      </div>
+    </footer>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
