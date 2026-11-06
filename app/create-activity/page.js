@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import { createClient } from '@supabase/supabase-js'
 import { useRouter } from 'next/navigation'
-import { ArrowLeft, Truck, UploadCloud, Scale } from 'lucide-react'
+import { ArrowLeft, Truck, UploadCloud, Scale, CheckCircle } from 'lucide-react'
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL,
@@ -12,11 +12,11 @@ const supabase = createClient(
 export default function CreateActivity() {
   const router = useRouter()
   const [loading, setLoading] = useState(false)
-  
+
   // Form State
   const [type, setType] = useState('E-Waste Collection')
   const [desc, setDesc] = useState('')
-  const [weight, setWeight] = useState('') 
+  const [weight, setWeight] = useState('')
   const [date, setDate] = useState('')
   const [file, setFile] = useState(null)
 
@@ -34,13 +34,13 @@ export default function CreateActivity() {
       // Ensure we use the 'evidence' bucket (or 'documents' if you didn't create 'activity-evidence')
       // For safety, let's use the 'documents' bucket we know exists
       const { error: fileError } = await supabase.storage.from('documents').upload(fileName, file)
-      
-      if (fileError) { 
+
+      if (fileError) {
         alert("Image upload failed: " + fileError.message)
         setLoading(false)
-        return 
+        return
       }
-      
+
       const { data: urlData } = supabase.storage.from('documents').getPublicUrl(fileName)
       imageUrl = urlData.publicUrl
     }
@@ -52,7 +52,7 @@ export default function CreateActivity() {
           institution_id: user.id,
           type: type,
           description: desc,
-          weight: weight, 
+          weight: weight,
           date: date,
           pickup_required: true,
           status: 'open', // 🟢 FIX: Changed from 'submitted' to 'open'
@@ -68,7 +68,7 @@ export default function CreateActivity() {
       // (Note: Your Database Trigger usually handles this, but doing it manually is a safe backup)
       const otp = Math.floor(100000 + Math.random() * 900000).toString()
       await supabase.from('waste_logs').insert([{ activity_id: activity.id, otp_code: otp }])
-      
+
       alert("Pickup Request Sent Successfully!")
       router.push('/dashboard') // Go back to dashboard to see the new 'Open' task
     }
@@ -77,7 +77,7 @@ export default function CreateActivity() {
   return (
     <div className="min-h-screen bg-gray-50 p-6">
       <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-        
+
         {/* Header */}
         <div className="bg-white border-b border-gray-100 p-6 flex items-center">
           <button onClick={() => router.back()} className="mr-4 text-gray-400 hover:text-gray-600 transition">
@@ -90,13 +90,13 @@ export default function CreateActivity() {
 
         <form onSubmit={handleSubmit} className="p-8 space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            
+
             {/* Waste Category */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Waste Category</label>
-              <select 
-                value={type} 
-                onChange={(e) => setType(e.target.value)} 
+              <select
+                value={type}
+                onChange={(e) => setType(e.target.value)}
                 className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none bg-white text-gray-900 transition"
               >
                 <option>E-Waste Collection</option>
@@ -111,12 +111,12 @@ export default function CreateActivity() {
             {/* Pickup Date */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Pickup Date</label>
-              <input 
-                type="date" 
-                required 
-                value={date} 
-                onChange={(e) => setDate(e.target.value)} 
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none bg-white text-gray-900 transition" 
+              <input
+                type="date"
+                required
+                value={date}
+                onChange={(e) => setDate(e.target.value)}
+                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none bg-white text-gray-900 transition"
               />
             </div>
           </div>
@@ -126,8 +126,8 @@ export default function CreateActivity() {
             <label className="block text-sm font-medium text-gray-700 mb-2">Total Weight (Kg) <span className="text-red-500">*</span></label>
             <div className="relative">
               <Scale className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
-              <input 
-                type="number" 
+              <input
+                type="number"
                 required
                 placeholder="e.g. 50"
                 value={weight}
@@ -140,12 +140,12 @@ export default function CreateActivity() {
           {/* Details */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">Additional Details</label>
-            <textarea 
-                rows="3" 
-                placeholder="Describe contents, specific location, or special instructions..." 
-                value={desc} 
-                onChange={(e) => setDesc(e.target.value)} 
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none bg-white text-gray-900 transition" 
+            <textarea
+                rows="3"
+                placeholder="Describe contents, specific location, or special instructions..."
+                value={desc}
+                onChange={(e) => setDesc(e.target.value)}
+                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none bg-white text-gray-900 transition"
             />
           </div>
 
@@ -153,11 +153,11 @@ export default function CreateActivity() {
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">Upload Photo (Optional)</label>
             <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:bg-gray-50 transition cursor-pointer relative bg-gray-50">
-              <input 
-                type="file" 
-                accept="image/*" 
-                onChange={(e) => setFile(e.target.files[0])} 
-                className="absolute inset-0 w-full h-full opacity-0 cursor-pointer" 
+              <input
+                type="file"
+                accept="image/*"
+                onChange={(e) => setFile(e.target.files[0])}
+                className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
               />
               <div className="flex flex-col items-center">
                 {file ? (
@@ -176,9 +176,9 @@ export default function CreateActivity() {
 
           {/* Submit */}
           <div className="flex justify-end pt-4">
-            <button 
-                type="submit" 
-                disabled={loading} 
+            <button
+                type="submit"
+                disabled={loading}
                 className="px-6 py-3 bg-green-700 text-white font-bold rounded-lg hover:bg-green-800 transition disabled:opacity-50 shadow-md"
             >
               {loading ? 'Sending Request...' : 'Schedule Pickup'}

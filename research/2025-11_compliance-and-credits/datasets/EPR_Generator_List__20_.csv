@@ -1,0 +1,21 @@
+#,Generator Type / Project Activity,EPR Waste Stream(s),Credit Generation Outcome / Mechanism
+1,Mechanical Plastic Recyclers (Category I),Rigid Plastic Packaging,Recycling Certificates (Cat I) based on verified weight of processed rigid plastic
+2,Mechanical Plastic Recyclers (Category II),Flexible Plastic Packaging (Single/Multilayer),Recycling Certificates (Cat II) for flexible packaging
+3,Mechanical Plastic Recyclers (Category III),Multilayered Plastic Packaging (MLP),Recycling Certificates (Cat III) for multilayer packaging
+4,Authorized E-Waste Recyclers,Electronic and Electrical Equipment (EEE) Waste,EPR Compliance for E-waste (material recovery records)
+5,E-Waste Refurbishers/Dismantlers,Electronic and Electrical Equipment (EEE) Waste,Component dismantling and refurbishment credits
+6,Specialized PCB Recyclers,E-Waste (Printed Circuit Boards),Recovery of critical minerals and precious metals from PCBs
+7,Authorized Battery Recyclers,"All Battery Types (Automotive, EV, Industrial, Portable)","Battery recycling compliance certificates under Battery Waste Management Rules, 2022"
+8,Specialized Li-ion Battery Recyclers,Electric Vehicle (EV) and Portable Batteries (Li-ion),High-efficiency Li-ion battery recycling certificates (EV battery stream)
+9,Authorized Battery Refurbishers,Used Batteries,Battery refurbishment credits counting towards EPR obligations
+10,Waste-to-Energy (WTE) Plants,Plastic Waste (End-of-Life),End-of-Life (EoL) Certificates via energy recovery (incineration/boilers)
+11,Cement Co-processing Units,Plastic Waste (End-of-Life),End-of-Life (EoL) Certificates via co-processing in cement kilns
+12,Waste-to-Oil Plants (Pyrolysis),Plastic Waste (End-of-Life),End-of-Life (EoL) Certificates via pyrolysis / waste-to-oil processing
+13,Industrial Composting Units,Compostable Plastic Packaging (Category IV),EoL Certificates for compostable plastics (industrial composting)
+14,Plastic Waste Processors (PWPs) for Road Construction,Plastic Waste (End-of-Life) used in road construction,EoL Certificates for road construction use of plastic waste
+15,Authorized Waste Tyre Processors,Waste Tyre,Waste tyre compliance certificates (recycling/disposal records)
+16,Authorized Used Oil Recyclers,Used Oil,Used oil recycling compliance certificates (re-refining/processing records)
+17,Producers/Brand Owners (UReP),Recycled Plastic Content (UReP),UReP Certificates for use of recycled plastic content in new products
+18,Brand Owners (Reuse),Rigid Plastic Packaging (Reuse),Reuse Certificates for tracked reuse of rigid packaging
+19,Digital EPR Aggregators/Consultancies,All Waste Streams (digital aggregation),Digital traceability & verification certificates facilitating transfers to PIBOs
+20,Recyclers for Non-Ferrous Metals,Industrial / E-waste / Other Hazardous Waste (non-ferrous metals),Material recovery compliance certificates for non-ferrous metals recovery

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="EcoTrace records recycling operations, prepares inspection-ready documentation, and makes facility processing usable for official compliance reporting." />
+  <title>EcoTrace - Compliance Operating System for Recyclers</title>
+  <!-- Modern Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+  <style>
+    /* Specific Home Page Styles */
+    .hero-diagram {
+      background: var(--surface-color);
+      border: 1px solid var(--border-color);
+      padding: 2rem;
+      border-radius: 6px;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    }
+
+    .diagram-step {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      background: var(--bg-color);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+    }
+
+    .diagram-step:last-child {
+      margin-bottom: 0;
+    }
+
+    .diagram-arrow {
+      text-align: center;
+      color: var(--brand-accent);
+      font-size: 1.5rem;
+      margin: 0.5rem 0;
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .problem-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .problem-icon {
+      color: #ef4444;
+      /* red for problem */
+      font-weight: bold;
+    }
+
+    .process-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 3rem;
+      position: relative;
+    }
+
+    .process-timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 24px;
+      width: 2px;
+      background: var(--border-color);
+      z-index: 0;
+    }
+
+    .process-step {
+      display: flex;
+      gap: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .step-number {
+      width: 50px;
+      height: 50px;
+      background: var(--brand-primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .step-content {
+      background: var(--surface-color);
+      border: 1px solid var(--border-color);
+      padding: 1.5rem;
+      border-radius: 4px;
+      flex: 1;
+    }
+
+    .mockup-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .mockup-card {
+      background: white;
+      border: 1px solid var(--border-color);
+      border-top: 4px solid var(--brand-primary);
+      padding: 1.5rem;
+      border-radius: 4px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    .mockup-card-title {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.5rem;
+    }
+
+    .mockup-line {
+      height: 8px;
+      background: var(--bg-color);
+      margin-bottom: 8px;
+      border-radius: 2px;
+    }
+
+    .user-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-top: 3rem;
+    }
+
+    .user-column {
+      background: var(--surface-color);
+      padding: 3rem;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .user-columns {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .mockup-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <a href="/" class="logo">
+        <span class="logo-icon">📋</span>
+        EcoTrace
+      </a>
+      <div class="nav-links">
+        <a href="/features.html">Features</a>
+        <a href="/for-recyclers.html">For Recyclers</a>
+        <a href="/for-agencies.html">For Agencies</a>
+        <a href="/knowledge.html">Knowledge</a>
+        <a href="/contact.html" class="btn btn-primary">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Section 1: Hero -->
+    <header class="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <div class="badge mb-2">Compliance Operating System</div>
+          <h1>Turn your recycling operations into inspection-ready records and EPR-eligible documentation.</h1>
+          <p>EcoTrace automatically records daily processing, maintains registers, reminds license renewals, and
+            prepares compliant documentation required by regulators and compliance agencies.</p>
+          <div style="display: flex; gap: 1rem;">
+            <a href="/for-recyclers.html" class="btn btn-primary btn-large">For Recyclers</a>
+            <a href="/for-agencies.html" class="btn btn-outline btn-large">For Compliance Agencies</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-diagram">
+            <h4 class="mb-3 text-center">Documentation Flow</h4>
+            <div class="diagram-step">
+              <span style="font-size: 1.5rem">🚛</span>
+              <strong>Waste Arrives</strong>
+            </div>
+            <div class="diagram-arrow">↓</div>
+            <div class="diagram-step">
+              <span style="font-size: 1.5rem">📱</span>
+              <strong>Recorded in System</strong>
+            </div>
+            <div class="diagram-arrow">↓</div>
+            <div class="diagram-step">
+              <span style="font-size: 1.5rem">📊</span>
+              <strong>Reports Generated</strong>
+            </div>
+            <div class="diagram-arrow">↓</div>
+            <div class="diagram-step" style="border-color: var(--brand-accent); background: rgba(34, 197, 94, 0.05);">
+              <span style="font-size: 1.5rem">✅</span>
+              <strong>Accepted Documentation</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Section 2: The Real Problem -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2>Why recyclers face inspection and reporting problems</h2>
+          <p style="color: var(--text-secondary); max-width: 600px; margin: 1rem auto 0;">Most facilities process waste
+            correctly but cannot prove it correctly when required.</p>
+        </div>
+
+        <div class="problem-grid">
+          <div class="problem-item">
+            <div class="problem-icon">✕</div>
+            <div>
+              <strong>Manual Registers Incomplete</strong>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">Paper logs are often missed during busy
+                operations.</p>
+            </div>
+          </div>
+          <div class="problem-item">
+            <div class="problem-icon">✕</div>
+            <div>
+              <strong>License Expiry Unnoticed</strong>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">Authorizations lapse without warning, causing
+                halts.</p>
+            </div>
+          </div>
+          <div class="problem-item">
+            <div class="problem-icon">✕</div>
+            <div>
+              <strong>Quantity Mismatch</strong>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">Inward and outward stock numbers don't
+                balance.</p>
+            </div>
+          </div>
+          <div class="problem-item">
+            <div class="problem-icon">✕</div>
+            <div>
+              <strong>Missing Disposal Records</strong>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">Lack of proof for hazardous residue disposal.
+              </p>
+            </div>
+          </div>
+          <div class="problem-item">
+            <div class="problem-icon">✕</div>
+            <div>
+              <strong>Monthly Submission Confusion</strong>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">Compiling 30 days of data at the last minute.
+              </p>
+            </div>
+          </div>
+          <div class="problem-item">
+            <div class="problem-icon">✕</div>
+            <div>
+              <strong>Documentation Rejection</strong>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">Agencies reject unverified or formatting-poor
+                records.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: What EcoTrace Does -->
+    <section class="section">
+      <div class="container" style="max-width: 800px;">
+        <div class="text-center mb-5">
+          <h2>How EcoTrace Works</h2>
+          <p style="color: var(--text-secondary);">A step-by-step compliant process.</p>
+        </div>
+
+        <div class="process-timeline">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h4>Record Activity</h4>
+              <p>Simple tap and photo at the facility whenever waste arrives, is processed, or is dispatched.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h4>System Builds Records</h4>
+              <p>EcoTrace automatically populates stock registers and processing logs based on the recorded activity.
+              </p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h4>Inspection Files Generated</h4>
+              <p>Date-wise logs and printable files are kept ready for any surprise or planned inspections.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h4>Data Structured</h4>
+              <p>Material history, timestamp records, and photo proofs are cross-verified and stored securely.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-number">5</div>
+            <div class="step-content">
+              <h4>Usable for Compliance Reporting</h4>
+              <p>Monthly summaries are exported in formats accepted by compliance agencies and PROs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: What You Get -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="text-center mb-5">What You Get</h2>
+        <div class="grid-4">
+          <div class="card">
+            <div class="card-icon mb-3">📋</div>
+            <h4>Automatic Registers</h4>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">Daily stock and processing
+              logs created without manual writing.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon mb-3">⏰</div>
+            <h4>Expiry Alerts</h4>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">Authorization and
+              certificate reminders before deadlines.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon mb-3">📁</div>
+            <h4>Inspection Preparation</h4>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">Instant printable inspection
+              records with photographic proof.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon mb-3">✅</div>
+            <h4>Compliance Documentation</h4>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">Structured records usable
+              directly for compliance reporting.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Proof Section -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center mb-4">
+          <h2>Verified Operations</h2>
+          <p style="color: var(--text-secondary);">Example documents generated from actual operational records.</p>
+        </div>
+
+        <div class="mockup-grid">
+          <div class="mockup-card">
+            <div class="mockup-card-title">Stock Register - Jan 2026</div>
+            <div class="mockup-line" style="width: 100%"></div>
+            <div class="mockup-line" style="width: 80%"></div>
+            <div class="mockup-line" style="width: 90%"></div>
+            <div class="mockup-line" style="width: 60%"></div>
+            <div
+              style="margin-top: 1rem; font-size: 0.8rem; color: var(--text-secondary); display: flex; justify-content: space-between;">
+              <span>Total Inward: 45.2T</span>
+              <span>Balance: 12.1T</span>
+            </div>
+          </div>
+          <div class="mockup-card">
+            <div class="mockup-card-title">Inspection Report</div>
+            <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+              <div style="width: 40px; height: 40px; background: var(--bg-color); border-radius: 4px;"></div>
+              <div>
+                <div class="mockup-line" style="width: 120px"></div>
+                <div class="mockup-line" style="width: 80px"></div>
+              </div>
+            </div>
+            <div class="mockup-line" style="width: 100%"></div>
+            <div class="mockup-line" style="width: 100%"></div>
+            <div class="mockup-line" style="width: 70%"></div>
+          </div>
+          <div class="mockup-card">
+            <div class="mockup-card-title">Facility Dashboard</div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+              <div style="text-align: center;">
+                <div style="font-size: 1.2rem; font-weight: bold; color: var(--brand-primary);">Active</div>
+                <div style="font-size: 0.7rem; color: var(--text-secondary);">CTO Status</div>
+              </div>
+              <div style="text-align: center;">
+                <div style="font-size: 1.2rem; font-weight: bold; color: var(--brand-accent);">24 Days</div>
+                <div style="font-size: 0.7rem; color: var(--text-secondary);">Till Renewal</div>
+              </div>
+            </div>
+            <div class="mockup-line" style="width: 100%"></div>
+            <div class="mockup-line" style="width: 85%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Who Uses EcoTrace -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="text-center mb-2">Who Uses EcoTrace</h2>
+        <div class="user-columns">
+          <div class="user-column">
+            <div class="card-icon" style="margin: 0 auto 1.5rem; width: 64px; height: 64px; font-size: 2rem;">🏭</div>
+            <h3>Recyclers</h3>
+            <p style="color: var(--text-secondary); margin-top: 1rem;">Manage daily records and keep facilities
+              inspection-ready without administrative stress.</p>
+            <a href="/for-recyclers.html" class="btn btn-outline mt-4">See how it works for you</a>
+          </div>
+          <div class="user-column">
+            <div class="card-icon" style="margin: 0 auto 1.5rem; width: 64px; height: 64px; font-size: 2rem;">🏢</div>
+            <h3>Compliance Agencies</h3>
+            <p style="color: var(--text-secondary); margin-top: 1rem;">Receive structured, verifiable processing
+              documentation ready for EPR portal submission.</p>
+            <a href="/for-agencies.html" class="btn btn-outline mt-4">View agency benefits</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: Final CTA -->
+    <section class="section" style="background-color: var(--brand-primary); color: white; text-align: center;">
+      <div class="container">
+        <h2 style="color: white; margin-bottom: 1.5rem; font-size: 2.5rem;">Make your recycling work officially
+          recognized.</h2>
+        <a href="/contact.html" class="btn btn-accent btn-large">Request Facility Setup</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <span class="logo-icon">📋</span>
+            EcoTrace
+          </a>
+          <p class="mt-2">EcoTrace supports facilities in maintaining operational records and documentation required for
+            regulatory reporting.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Product</h4>
+          <a href="/features.html">Features</a>
+          <a href="/how-it-works.html">How it Works</a>
+        </div>
+        <div class="footer-links">
+          <h4>Solutions</h4>
+          <a href="/for-recyclers.html">For Recyclers</a>
+          <a href="/for-agencies.html">For Agencies</a>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <a href="/knowledge.html">Knowledge Center</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>EcoTrace records recycling operations, prepares inspection-ready documentation, and makes facility processing
+          usable for official compliance reporting.</p>
+      </div>
+    </footer>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

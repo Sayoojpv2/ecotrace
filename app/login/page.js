@@ -35,7 +35,7 @@ export default function Login() {
         .select('role')
         .eq('id', data.user.id)
         .single()
-      
+
       if (profile?.role === 'handler') {
         router.push('/handler/dashboard')
       } else {
@@ -46,7 +46,7 @@ export default function Login() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4">
-      
+
       {/* 🟢 NEW: Back Button */}
       <div className="w-full max-w-md mb-6">
         <Link href="/" className="flex items-center text-gray-500 hover:text-green-700 transition font-medium">
@@ -55,7 +55,7 @@ export default function Login() {
       </div>
 
       <div className="bg-white p-8 rounded-xl shadow-lg w-full max-w-md border border-gray-100">
-        
+
         <div className="text-center mb-8">
           <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
             <Leaf className="h-8 w-8 text-green-600" />
@@ -65,13 +65,13 @@ export default function Login() {
         </div>
 
         <form onSubmit={handleLogin} className="space-y-5">
-          
+
           <div>
             <label className="block text-sm font-bold text-gray-700 mb-1">Email Address</label>
             <div className="relative">
               <User className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
-              <input 
-                type="email" 
+              <input
+                type="email"
                 required
                 className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition bg-gray-50 focus:bg-white"
                 placeholder="admin@college.edu"
@@ -85,8 +85,8 @@ export default function Login() {
             <label className="block text-sm font-bold text-gray-700 mb-1">Password</label>
             <div className="relative">
               <Lock className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
-              <input 
-                type="password" 
+              <input
+                type="password"
                 required
                 className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition bg-gray-50 focus:bg-white"
                 placeholder="••••••"
@@ -96,7 +96,7 @@ export default function Login() {
             </div>
           </div>
 
-          <button 
+          <button
             disabled={loading}
             className="w-full bg-green-700 text-white font-bold py-3 rounded-lg hover:bg-green-800 transition shadow-md disabled:opacity-50"
           >
@@ -106,7 +106,7 @@ export default function Login() {
         </form>
 
         <div className="mt-6 text-center text-sm text-gray-500">
-          Don't have an account? <Link href="/signup" className="text-green-700 font-bold hover:underline">Create an Institution Profile</Link>
+          Don&apos;t have an account? <Link href="/signup" className="text-green-700 font-bold hover:underline">Create an Institution Profile</Link>
         </div>
 
       </div>

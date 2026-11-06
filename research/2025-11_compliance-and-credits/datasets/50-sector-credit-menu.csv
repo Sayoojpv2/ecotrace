@@ -1,0 +1,51 @@
+#,Sector / Activity,Credit Type(s),Difficulty,Verification Cost Estimate (INR),Est. Annual Credit Volume (t CO2e or eq.),Credit Value Range (INR),Estimated Net Benefit (Approx),Time to Realise Benefit
+1,Large e‑waste recycling unit,Carbon + EPR (e‑waste),High,100000,1000,"₹2,00,000‑₹4,00,000","₹1,00,000‑₹3,00,000",6‑12 months
+2,Plastic manufacturing offset project,Carbon + EPR (plastic),High,100000,800,"₹1,60,000‑₹3,20,000","₹60,000‑₹2,20,000",9‑15 months
+3,Solar rooftop (commercial ≥100 kW),Carbon,Medium,70000,600,"₹1,20,000‑₹2,40,000","₹50,000‑₹1,70,000",6‑12 months
+4,Biogas plant (organic waste),Carbon,Medium,90000,700,"₹1,40,000‑₹2,80,000","₹50,000‑₹1,90,000",9‑18 months
+5,Waste‑to‑Energy plant,Carbon,Very High,150000,1200,"₹2,40,000‑₹4,80,000","₹90,000‑₹3,30,000",12‑24 months
+6,Scrap metal refining plant,Carbon,High,120000,900,"₹1,80,000‑₹3,60,000","₹60,000‑₹2,40,000",9‑15 months
+7,Tyre recycling & rubber reuse plant,Carbon + EPR (tyres),High,110000,850,"₹1,70,000‑₹3,40,000","₹60,000‑₹2,30,000",9‑15 months
+8,Regenerative farming cooperative project,Carbon,Medium,80000,500,"₹1,00,000‑₹2,00,000","₹20,000‑₹1,20,000",12‑18 months
+9,Tree‑plantation / agroforestry project,Carbon,Medium,90000,650,"₹1,30,000‑₹2,60,000","₹40,000‑₹1,70,000",12‑24 months
+10,Industrial energy‑efficiency upgrade,Carbon,High,150000,800,"₹1,60,000‑₹3,20,000","₹10,000‑₹1,70,000",12‑24 months
+11,Solar EV charging station network,Carbon,Medium,100000,700,"₹1,40,000‑₹2,80,000","₹40,000‑₹1,80,000",9‑18 months
+12,Delivery fleet EV conversion company,Carbon,Medium,90000,550,"₹1,10,000‑₹2,20,000","₹20,000‑₹1,30,000",9‑15 months
+13,Organic fertilizer / compost plant from waste,Carbon,Medium,110000,600,"₹1,20,000‑₹2,40,000","₹10,000‑₹1,30,000",9‑18 months
+14,Grey‑water / water‑reuse system (large complex),Carbon,Medium,70000,400,"₹80,000‑₹1,60,000","₹10,000‑₹90,000",9‑15 months
+15,Green building retrofit (large office/mall),Carbon,Medium,100000,800,"₹1,60,000‑₹3,20,000","₹60,000‑₹2,20,000",12‑18 months
+16,Battery recycling & safe disposal facility,Carbon + EPR (batteries),High,120000,750,"₹1,50,000‑₹3,00,000","₹30,000‑₹1,80,000",9‑15 months
+17,Plastic packaging redesign & waste avoidance project,Plastic credits + Carbon,Medium,80000,350,"₹70,000‑₹1,40,000","₹-10,000‑₹60,000",12‑24 months
+18,Tyre‑derived fuel replacement project,Carbon + EPR (tyre),High,130000,600,"₹1,20,000‑₹2,40,000","₹-10,000‑₹1,10,000",12‑24 months
+19,Glass recycling facility,Carbon,Medium,90000,500,"₹1,00,000‑₹2,00,000","₹10,000‑₹1,10,000",9‑15 months
+20,Rice‑field methane reduction techniques,Carbon,High,140000,450,"₹90,000‑₹1,80,000","₹-50,000‑₹40,000",12‑30 months
+21,Seaweed / kelp farming project,Carbon,High,150000,1000,"₹2,00,000‑₹4,00,000","₹50,000‑₹2,50,000",18‑30 months
+22,Organic dairy farm (low methane feed),Carbon,Medium,100000,550,"₹1,10,000‑₹2,20,000","₹10,000‑₹1,20,000",12‑24 months
+23,Paper recycling plant,Carbon,High,120000,650,"₹1,30,000‑₹2,60,000","₹10,000‑₹1,40,000",9‑18 months
+24,Waste oil re‑refining plant,Carbon,High,130000,700,"₹1,40,000‑₹2,80,000","₹10,000‑₹1,50,000",9‑18 months
+25,Community compost subscription service,Carbon,Low,50000,300,"₹60,000‑₹1,20,000","₹10,000‑₹70,000",6‑12 months
+26,Green hydrogen production,Carbon (avoid fossil H2),Very High,200000,1500,"₹3,00,000‑₹6,00,000","₹1,00,000‑₹4,00,000",18‑36 months
+27,Carbon capture & storage (CCUS) in industry,Carbon removal,Very High,250000,2000,"₹4,00,000‑₹8,00,000","₹1,50,000‑₹5,50,000",24‑36 months
+28,Biochar production from agricultural waste,Carbon removal + Soil sequestration,High,180000,800,"₹1,60,000‑₹3,20,000","₹-20,000‑₹1,40,000",12‑24 months
+29,Seaweed / kelp farming projects,Carbon sequestration,High,150000,1000,"₹2,00,000‑₹4,00,000","₹50,000‑₹2,50,000",18‑30 months
+30,Sustainable aviation fuel (SAF) production,Carbon avoidance,Very High,300000,2500,"₹5,00,000‑₹10,00,000","₹2,00,000‑₹7,00,000",24‑36 months
+31,Solar thermal heating for hotels/factories,Carbon reduction,Medium,90000,450,"₹90,000‑₹1,80,000","₹0‑₹90,000",9‑18 months
+32,Electric boat / marine mobility services,Carbon reduction,Medium,100000,600,"₹1,20,000‑₹2,40,000","₹20,000‑₹1,40,000",12‑18 months
+33,Shared e‑bike / e‑scooter systems,Carbon reduction,Medium,70000,300,"₹60,000‑₹1,20,000","₹-10,000‑₹50,000",6‑12 months
+34,Green building material manufacturing (LC3 cement),Carbon reduction,High,150000,700,"₹1,40,000‑₹2,80,000","₹-10,000‑₹1,30,000",12‑24 months
+35,Livestock methane‑reduction systems,Carbon reduction (methane),High,120000,650,"₹1,30,000‑₹2,60,000","₹10,000‑₹1,40,000",12‑24 months
+36,Rice paddy methane reduction techniques,Carbon reduction (methane),High,140000,450,"₹90,000‑₹1,80,000","₹-50,000‑₹40,000",12‑30 months
+37,Soil‑carbon projects on degraded lands,Carbon sequestration,High,110000,550,"₹1,10,000‑₹2,20,000","₹0‑₹1,10,000",12‑24 months
+38,Recycling of composite materials,Carbon + EPR,Medium,100000,600,"₹1,20,000‑₹2,40,000","₹20,000‑₹1,40,000",9‑15 months
+39,Energy‑efficient data centres,Carbon reduction,High,180000,800,"₹1,60,000‑₹3,20,000","₹-20,000‑₹1,40,000",12‑24 months
+40,AI‑based industrial process optimisation,Carbon reduction,Medium,100000,500,"₹1,00,000‑₹2,00,000","₹0‑₹1,00,000",9‑18 months
+41,Community tool‑rental / reuse libraries,Carbon reduction,Low,50000,250,"₹50,000‑₹1,00,000","₹0‑₹50,000",6‑12 months
+42,Compost from municipal organic waste,Carbon reduction,Medium,80000,450,"₹90,000‑₹1,80,000","₹10,000‑₹1,00,000",9‑15 months
+43,Urban vertical farming,Carbon reduction + food security,Medium,90000,400,"₹80,000‑₹1,60,000","₹-10,000‑₹70,000",9‑15 months
+44,Thermal insulation retrofit in old buildings,Carbon reduction,Medium,70000,350,"₹70,000‑₹1,40,000","₹0‑₹70,000",6‑12 months
+45,Zero‑waste retail / refill shops,Carbon + EPR,Medium,80000,300,"₹60,000‑₹1,20,000","₹-20,000‑₹40,000",6‑12 months
+46,Eco‑friendly packaging (biodegradable),Carbon + EPR,Medium,85000,350,"₹70,000‑₹1,40,000","₹-15,000‑₹55,000",9‑15 months
+47,Used EV battery reuse for stationary storage,Carbon reduction,High,120000,700,"₹1,40,000‑₹2,80,000","₹20,000‑₹1,60,000",12‑18 months
+48,Water‑reuse systems in industrial‑parks,Carbon + water‑emission reduction,Medium,90000,500,"₹1,00,000‑₹2,00,000","₹10,000‑₹1,10,000",9‑15 months
+49,Large‑scale tree plantation in urban areas,Carbon sequestration,Medium,85000,450,"₹90,000‑₹1,80,000","₹5,000‑₹95,000",12‑18 months
+50,Industrial methane capture from waste streams,Carbon reduction (methane),Very High,150000,1000,"₹2,00,000‑₹4,00,000","₹50,000‑₹2,50,000",18‑30 months

@@ -1,0 +1,37 @@
+# EcoTrace Web Application
+- [x] Planning & Project Setup
+  - [x] Write Implementation Plan
+  - [x] Initialize Vite + React project
+  - [x] Install dependencies (react-router-dom, lucide-react, recharts)
+- [x] Core Setup & Routing
+  - [x] Define global CSS and color theme (dark teal, safety green, red alerts)
+  - [x] Setup React Router structure (Auth login + Dashboard shell)
+- [x] Login System
+  - [x] Simple login UI (mobile + password/OTP)
+  - [x] Mock auth state
+- [x] Dashboard Layout
+  - [x] Left Sidebar with navigation (Overview, Alerts, Pickup, Reports, Documents, Data Tracking)
+  - [x] Top Header
+- [x] Dashboard Pages
+  - [x] Overview Page (status indicators, summary cards, quick actions, stock table, timeline)
+  - [x] Alerts Page (list view, filters, color-coding)
+  - [x] Pickup Page (split view form + recent table)
+  - [x] Reports Page (downloadable report cards for inspection and summaries)
+  - [x] Documents Page (compliance vault, folders, upload modal, expiry tracking)
+  - [x] Data Tracking Page (charts and trends analysis)
+- [x] Role Specific Views & Final Polish
+  - [x] Create variations for Recycler, Compliance Partner (Read-only), and Admin
+  - [x] Verify responsive design and styling rules (no tailwind, large fonts, 2 clicks)
+- [x] Public Landing & Sign Up
+  - [x] Create Landing Page component (`/`) with Hero and Features sections
+  - [x] Create Sign Up Page component (`/signup`)
+  - [x] Update App.tsx routing (move Dashboard to `/dashboard` or protected route, move Login to `/login`)
+- [x] Database Backend Integration (Supabase)
+  - [x] Execute SQL schema inside Supabase to create `facilities`, `pickups`, `processing_logs` and `documents` tables
+  - [x] Install `@supabase/supabase-js` and configure `supabaseClient.ts`
+  - [x] Refactor AuthContext for real Supabase authentication
+  - [x] Fix Sign-out routing to precisely target `/`
+  - [x] Refactor Overview Dashboard to fetch and display Zero-States from Supabase
+  - [x] Refactor Pickups page to insert/fetch data to Supabase
+  - [x] Refactor Documents page to upload/store metadata in Supabase
+  - [x] Refactor Data Tracking page to use real analytics data

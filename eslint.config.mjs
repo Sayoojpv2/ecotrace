@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Recovered historical material, not part of the running app:
+    "archive/**",
+    "research/**",
   ]),
 ]);
 

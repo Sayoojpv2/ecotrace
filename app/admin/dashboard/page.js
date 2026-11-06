@@ -25,9 +25,17 @@ export default function AdminDashboard() {
   }, [])
 
   async function loadAdminData() {
+    // Client-side gate added during the 2026-11 recovery. The page previously
+    // loaded platform-wide data for any visitor. This only hides the UI;
+    // real protection must come from Supabase RLS (see docs/SECURITY_REVIEW.md).
+    const { data: { user } } = await supabase.auth.getUser()
+    if (!user) return router.replace('/login')
+    const { data: me } = await supabase.from('profiles').select('role').eq('id', user.id).single()
+    if (me?.role !== 'admin') return router.replace('/')
+
     const { count: instCount } = await supabase.from('profiles').select('*', { count: 'exact', head: true }).eq('role', 'institution')
     const { count: actCount } = await supabase.from('activities').select('*', { count: 'exact', head: true })
-    
+
     const { data: wasteData } = await supabase.from('activities').select('weight').eq('status', 'locked')
     const totalWeight = wasteData?.reduce((sum, item) => sum + (item.weight || 0), 0) || 0
 
@@ -44,8 +52,8 @@ export default function AdminDashboard() {
       .from('activities')
       .select('*, profiles!institution_id(org_name)')
       .order('date', { ascending: false })
-      .limit(50) 
-    
+      .limit(50)
+
     setAuditLog(logs || [])
     setLoading(false)
   }
@@ -62,14 +70,14 @@ export default function AdminDashboard() {
         alert("Delete failed: " + error.message)
     } else {
         setAuditLog(auditLog.filter(item => item.id !== id))
-        loadAdminData() 
+        loadAdminData()
         alert("Record deleted successfully.")
     }
   }
 
   return (
     <div className="min-h-screen bg-gray-100 font-sans pb-20">
-      
+
       {/* Top Navbar */}
       <div className="bg-gray-900 text-white p-4 flex justify-between items-center shadow-md sticky top-0 z-50">
         <div className="flex items-center space-x-2">
@@ -114,7 +122,7 @@ export default function AdminDashboard() {
                     <FileText className="mr-2 h-5 w-5 text-gray-500"/> Master Audit Log
                 </h3>
             </div>
-            
+
             <table className="w-full text-left border-collapse">
                 <thead>
                     <tr className="bg-gray-100 text-gray-500 text-xs uppercase tracking-wider border-b border-gray-200">
@@ -150,7 +158,7 @@ export default function AdminDashboard() {
                                     </span>
                                 </td>
                                 <td className="p-4 text-right">
-                                    <button 
+                                    <button
                                         onClick={() => handleDelete(log.id)}
                                         className="text-gray-300 hover:text-red-600 hover:bg-red-50 p-2 rounded-full transition"
                                         title="Delete Record"
